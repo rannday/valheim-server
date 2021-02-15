@@ -27,7 +27,7 @@ sudo apt install steamcmd -y
 
 ## Clone repo
 `cd`  
-`git clone git@github.com:rannday/valheim-server.git .`
+`git clone https://github.com/rannday/valheim-server.git`
 
 ## Run the install script. Requires root for systemd symlinks
 `./install.sh`

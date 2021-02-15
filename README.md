@@ -29,22 +29,29 @@ sudo apt install steamcmd -y
 `cd`  
 `git clone https://github.com/rannday/valheim-server.git`
 
-## Run the install script. Requires root for systemd symlinks
-`./install.sh`
+## Create a backup directory
+`cd`  
+`mkdir backups`
 
-## TO-DO
-Install script isn't done. All it will do is symlink the files to the correct directories
+## Pre-install the game
+`/usr/games/steamcmd +login anonymous +force_install_dir /opt/valheim +app_update 896660 validate +exit`
 
-server_files/ to /opt/valheim  
-scripts/start.sh & update.sh to /opt/valheim
-### This is what requires root
-scripts/valheim.service, valheim-backup.service & valheim-backup.timer to /etc/systemd/system
+## Symlink stuff
+ln -s /home/valheim/valheim-server/scripts/start.sh /opt/valheim/start.sh
+ln -s /home/valheim/valheim-server/scripts/update.sh /opt/valheim/update.sh
+ln -s /home/valheim/valheim-server/server_files/adminlist.txt /opt/valheim/adminlist.txt
+ln -s /home/valheim/valheim-server/server_files/bannedlist.txt /opt/valheim/bannedlist.txt
+ln -s /home/valheim/valheim-server/server_files/permittedlist.txt /opt/valheim/permittedlist.txt
 
-### Also TO-DO
-script all of this
+sudo ln -s /home/valheim/valheim-server/scripts/valheim.service /etc/systemd/system/valheim.service
+sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.service /etc/systemd/valheim-backup.service
+sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.timer /etc/systemd/valheim-backup.timer
 
 ## Start and enable the services
 `sudo systemctl enable --now valheim.service`  
 `sudo systemctl enable --now valheim-backup.timer`
 
 # DONE!
+
+## TO-DO
+Script all of this into install.sh

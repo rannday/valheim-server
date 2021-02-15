@@ -49,6 +49,7 @@ sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.service /etc/syst
 sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.timer /etc/systemd/valheim-backup.timer  
 
 ## Start and enable the services
+`sudo systemctl daemon-reload`  
 `sudo systemctl enable --now valheim.service`  
 `sudo systemctl enable --now valheim-backup.timer`
 

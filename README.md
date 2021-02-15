@@ -50,8 +50,8 @@ ln -s /home/valheim/valheim-server/server_files/permittedlist.txt /opt/valheim/p
 ## Requires root
 ```
 sudo ln -s /home/valheim/valheim-server/scripts/valheim.service /etc/systemd/system/valheim.service  
-sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.service /etc/systemd/valheim-backup.service  
-sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.timer /etc/systemd/valheim-backup.timer  
+sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.service /etc/systemd/system/valheim-backup.service  
+sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.timer /etc/systemd/system/valheim-backup.timer  
 ```
 
 ## Start and enable the services

@@ -1,8 +1,8 @@
 # Valheim Server Setup
 ## Ubuntu 20.04
 
-## Install git
-`sudo apt install git`
+## Install prerequisites
+`sudo apt install git tmux`
 
 ## Create server directory
 `sudo mkdir /opt/valheim`

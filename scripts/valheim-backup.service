@@ -1,0 +1,9 @@
+[Unit]
+Description=Valheim backup service
+
+[Service]
+Type=oneshot
+User=valheim
+Group=valheim
+WorkingDirectory=/home/valheim
+ExecStart=/bin/bash /home/valheim/scripts/backup.sh

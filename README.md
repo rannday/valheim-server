@@ -37,15 +37,16 @@ sudo apt install steamcmd -y
 `/usr/games/steamcmd +login anonymous +force_install_dir /opt/valheim +app_update 896660 validate +exit`
 
 ## Symlink stuff
-ln -s /home/valheim/valheim-server/scripts/start.sh /opt/valheim/start.sh
-ln -s /home/valheim/valheim-server/scripts/update.sh /opt/valheim/update.sh
-ln -s /home/valheim/valheim-server/server_files/adminlist.txt /opt/valheim/adminlist.txt
-ln -s /home/valheim/valheim-server/server_files/bannedlist.txt /opt/valheim/bannedlist.txt
-ln -s /home/valheim/valheim-server/server_files/permittedlist.txt /opt/valheim/permittedlist.txt
+ln -s /home/valheim/valheim-server/scripts/start.sh /opt/valheim/start.sh  
+ln -s /home/valheim/valheim-server/scripts/update.sh /opt/valheim/update.sh  
+ln -s /home/valheim/valheim-server/server_files/adminlist.txt /opt/valheim/adminlist.txt  
+ln -s /home/valheim/valheim-server/server_files/bannedlist.txt /opt/valheim/bannedlist.txt  
+ln -s /home/valheim/valheim-server/server_files/permittedlist.txt /opt/valheim/permittedlist.txt  
 
-sudo ln -s /home/valheim/valheim-server/scripts/valheim.service /etc/systemd/system/valheim.service
-sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.service /etc/systemd/valheim-backup.service
-sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.timer /etc/systemd/valheim-backup.timer
+## Requires root
+sudo ln -s /home/valheim/valheim-server/scripts/valheim.service /etc/systemd/system/valheim.service  
+sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.service /etc/systemd/valheim-backup.service  
+sudo ln -s /home/valheim/valheim-server/scripts/valheim-backup.timer /etc/systemd/valheim-backup.timer  
 
 ## Start and enable the services
 `sudo systemctl enable --now valheim.service`  

@@ -14,13 +14,13 @@
 `sudo chown valheim:valheim /opt/valheim`
 
 ## Install steamcmd
-````
+```
 sudo apt update && sudo apt upgrade -y
 sudo add-apt-repository -y multiverse
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install steamcmd -y
-````
+```
 
 ## Switch to user
 `su - valheim`
@@ -29,8 +29,10 @@ sudo apt install steamcmd -y
 `cd`  
 `git clone https://github.com/rannday/valheim-server.git`
 
+## Edit start.sh, change server start parameters
+`nano valheim-server/scripts/start.sh`
+
 ## Create a backup directory
-`cd`  
 `mkdir backups`
 
 ## Pre-install the game

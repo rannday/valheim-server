@@ -72,3 +72,5 @@ sudo ufw allow in on eno1 to any port 6458 proto udp
 
 ## TO-DO
 Script all of this into install.sh
+
+Setup a proper world backup script. Right now, it's just rsync, so if it gets corrupted, the backups will, too.

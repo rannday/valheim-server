@@ -1,3 +1,5 @@
+this was created for when the game first came out. probably doesn't work anymore.
+
 # Valheim Server Setup
 ## Ubuntu 20.04
 

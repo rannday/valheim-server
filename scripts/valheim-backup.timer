@@ -1,9 +1,0 @@
-[Unit]
-Description=Valheim backup timer
-
-[Timer]
-OnCalendar=*:0/30
-Unit=valheim-backup.service
-
-[Install]
-WantedBy=timers.target

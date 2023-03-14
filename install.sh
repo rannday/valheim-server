@@ -45,7 +45,7 @@ function build_start {
   echo "" >> $start_s
   echo "echo \"Starting server PRESS CTRL-C to exit\"" >> $start_s
   echo "" >> $start_s
-  echo "./valheim_server.x86_64 -name \"$NAME\" -port $PORT -world \"$WORLD\" -password \"$PASS\" -savedir $SAVE_DIR -public $PUB" >> $start_s
+  echo "./valheim_server.x86_64 -name \"$NAME\" -port $PORT -world \"$WORLD\" -password \"$PASS\" -savedir $SAVE_DIR -public $PUB" -crossplay >> $start_s
   #echo "./valheim_server.x86_64 -name \"$NAME\" -port $PORT -world \"$WORLD\" -password \"$PASS\" -public $PUB" >> $start_s
   echo "" >> $start_s
   echo "export LD_LIBRARY_PATH=\$templdpath" >> $start_s
